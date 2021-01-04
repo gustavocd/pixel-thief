@@ -1,0 +1,78 @@
+@font-face {
+  font-family: VCR_OSD_MONO;
+  src: url('./fonts/VCR_OSD_MONO.ttf');
+}
+
+:root {
+  --color-black: hsla(0, 0%, 0%, 1);
+  --color-focus: hotpink;
+  --color-white: hsla(0, 100%, 100%, 1);
+  --font-size-normal: 16px;
+  --font-size-large: 40px;
+  --font-family: 'VCR_OSD_MONO', mono-space;
+  --space: 4;
+}
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  color: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  color: var(--color-white);
+  background: var(--color-black);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  font-size: var(--font-size-normal);
+  font-family: var(--font-family);
+  line-height: 1.4;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+[disabled] {
+  pointer-events: none;
+}
+
+:focus {
+  outline: 1px solid var(--color-focus);
+}
